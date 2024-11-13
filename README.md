@@ -10,8 +10,8 @@ _Muneeb Azfar Nafees_
 _Describe the challenges you faced and what you learned_
 
 ### Dataset
-
-_Which dataset did you choose for the classification task?_
+1. SMSSpamCollection
+2. German_dataset
 
 ### Resources
 
