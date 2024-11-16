@@ -7,7 +7,11 @@ _Muneeb Azfar Nafees_
 
 ### Introspection
 
-_Describe the challenges you faced and what you learned_
+## Modeling Datasets:
+1. **SMSSpamCollection** was pretty easy to model using the example model. The only difficult part was resolving the error while splitting the text, as we had to specify an extra parameter separator as tab (\t).
+2. In the **German_dataset**, I faced issues while separating the data and making plots.
+    - For this dataset, each separator I used threw an error, so I used a different technique. I read the file line by line and separated each line using the first semicolon, as the data was organized in the form Type;News.
+    - As there were around nine types, I had to fix the plots of each graph to ensure there was no text overlap on the x-axis. I increased the size of the figure and rotated the text 45 degrees to ensure there was no overlap.
 
 ### Dataset
 1. SMSSpamCollection
