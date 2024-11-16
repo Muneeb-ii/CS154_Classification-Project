@@ -1,23 +1,23 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/0C7hcwxP)
 # Project 6 Classification
 
-### Name
+## Name
 
 _Muneeb Azfar Nafees_
 
-### Introspection
+## Introspection
 
-## Modeling Datasets:
+### Modeling Datasets:
 1. **SMSSpamCollection** was pretty easy to model using the example model. The only difficult part was resolving the error while splitting the text, as we had to specify an extra parameter separator as tab (\t).
 2. In the **German_dataset**, I faced issues while separating the data and making plots.
     - For this dataset, each separator I used threw an error, so I used a different technique. I read the file line by line and separated each line using the first semicolon, as the data was organized in the form Type;News.
     - As there were around nine types, I had to fix the plots of each graph to ensure there was no text overlap on the x-axis. I increased the size of the figure and rotated the text 45 degrees to ensure there was no overlap.
 
-### Dataset
+## Dataset
 1. SMSSpamCollection
 2. German_dataset
 
-### Resources
+## Resources
 
 _List the people and resources you used to complete the project_
 
