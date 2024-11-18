@@ -18,8 +18,13 @@ _Muneeb Azfar Nafees_
 2. German_dataset
 
 ## Resources
-
-_List the people and resources you used to complete the project_
+1. https://docs.python.org/3/library/pathlib.html
+2. https://pandas.pydata.org/docs/reference/series.html
+3. https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
+4. https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html
+5. https://scikit-learn.org/1.5/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html
+6. https://scikit-learn.org/1.5/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
+7. https://scikit-learn.org/1.5/modules/generated/sklearn.naive_bayes.MultinomialNB.html
 
 
 ### *DO NOT EDIT BELOW THIS LINE*
