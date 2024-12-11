@@ -84,5 +84,7 @@ It should be fairly easy to duplicate the example notebook and train a ML model 
 * Run your code multiple times and vary the inputs to ensure it works as intended. 
 
 ## Feedback
-
-
+- [10] Version Control Practice
+- [40] ML Steps
+- [50] Question Answers
+- Project 6: 100 points - Excellent implementation and detailed answers!
