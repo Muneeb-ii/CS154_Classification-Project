@@ -1,90 +1,73 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/0C7hcwxP)
-# Project 6 Classification
+# Classification with Naive Bayes
 
-## Name
+This project involves building Naive Bayes classifiers using real-world datasets to classify messages or news articles into meaningful categories. Two datasets — **SMSSpamCollection** and **German_dataset** — were explored, preprocessed, and modeled using scikit-learn tools. Developed as part of **CS154**, an introductory Python course with NLP components.
 
-_Muneeb Azfar Nafees_
-
-## Introspection
-
-### Modeling Datasets:
-1. **SMSSpamCollection** was pretty easy to model using the example model. The only difficult part was resolving the error while splitting the text, as we had to specify an extra parameter separator as tab (\t).
-2. In the **German_dataset**, I faced issues while separating the data and making plots.
-    - For this dataset, each separator I used threw an error, so I used a different technique. I read the file line by line and separated each line using the first semicolon, as the data was organized in the form Type;News.
-    - As there were around nine types, I had to fix the plots of each graph to ensure there was no text overlap on the x-axis. I increased the size of the figure and rotated the text 45 degrees to ensure there was no overlap.
-
-## Dataset
-1. SMSSpamCollection
-2. German_dataset
-
-## Resources
-1. https://docs.python.org/3/library/pathlib.html
-2. https://pandas.pydata.org/docs/reference/series.html
-3. https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
-4. https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html
-5. https://scikit-learn.org/1.5/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html
-6. https://scikit-learn.org/1.5/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
-7. https://scikit-learn.org/1.5/modules/generated/sklearn.naive_bayes.MultinomialNB.html
-
-
-### *DO NOT EDIT BELOW THIS LINE*
 ---
 
-## Goal
+## 📌 Features
 
-The goals of this project are:
+- Custom classification pipelines built using:
+  - `CountVectorizer` and `TfidfVectorizer` for feature extraction
+  - `MultinomialNB` for classification
+  - `train_test_split` for model evaluation
+- Dataset-specific preprocessing to handle:
+  - Tab-delimited text files (SMSSpamCollection)
+  - Non-standard separators and multiple label types (German_dataset)
+- Customized data visualizations for multiclass text data
+- Emphasis on reading documentation and understanding built-in Python libraries
 
-* Using built-in and core Python libraries to develop a classification model for an unseen dataset
-* Understand the steps for a machine learning task
-* Learn to read documentation to understand what each object and method does and other helpful methods available.
+---
 
-## Description
+## 🧠 Reflections
 
-In this project, you are provided with a Jupyter Notebook that contains code to train a Naive Bayes classifier to predict the sentiment of IMDB review dataset. Your goal is to use this notebook as an example and create a similar notebook to train a classifier on a similar dataset, but **not the IMDB dataset**. These dataset files are provided in the dataset folder.
+- **SMSSpamCollection**: Modeling was straightforward using the example notebook. The only challenge was handling tab-separated values, which was resolved by explicitly specifying `\t` as the separator.
+- **German_dataset**: Required careful parsing. I read each line individually and split using the first semicolon due to inconsistent formatting. For visualizations, I resized figures and rotated labels to avoid x-axis text overlap when plotting 9+ categories.
+- This project taught me how to adapt existing ML workflows to new datasets and troubleshoot issues with parsing, plotting, and classification accuracy.
 
-In this project there are two primary tasks:
+---
 
-1. Create a Jupyter notebook that performs all the steps described in the example notebook on a different dataset.
-2. Understand the libraries, classes, and methods being used by reading the documentation and answer the prompt questions.
+## 🛠️ How to Use
 
-It should be fairly easy to duplicate the example notebook and train a ML model on a different dataset, however, without understanding what is happening you won't be able to use it on a different problem. Answer each question in as much detail as possible. 
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/muneebnafees/CS154_Classification-Project.git
+   cd CS154_Classification-Project
+   ```
 
+2. Install dependencies (if not already installed):
+   ```bash
+   pip install pandas scikit-learn matplotlib
+   ```
 
-## Rubric
+3. Open and run the notebook:
+   ```bash
+   jupyter notebook classification_project.ipynb
+   ```
 
-**1. Version Control Practice** - **10 points**
+4. You’ll find two workflows inside:
+   - **Spam Classifier** (SMSSpamCollection)
+   - **News Topic Classifier** (German_dataset)
 
-- **Commit Numbers and Sizes**: *5 points*
-  - The commits are made at regular intervals and of coherent pieces 
-- **Commit Messages**: *5 points*
-  - Easy to follow along the commit history
+---
 
-**3. ML Steps ** - **40 points**
+## 📊 Datasets
 
-- Steps 1 - 4 are implemented.
-- The accuracy is higher than 50%
-- The model is trained on both Bag of Words and TF IDF features
+- **SMSSpamCollection** – Classify messages as spam or not spam
+- **German_dataset** – Classify news into ~9 categories based on text type
 
-**4. Question Answers ** - **50 points**
+---
 
-- All questions are answered
-- Each question is answered in detail
+## 📚 References
 
-**Total Points: 100**
+- [Pathlib Docs](https://docs.python.org/3/library/pathlib.html)  
+- [Pandas `apply()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html)  
+- [Scikit-learn `train_test_split`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)  
+- [Scikit-learn CountVectorizer](https://scikit-learn.org/1.5/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)  
+- [Scikit-learn TfidfVectorizer](https://scikit-learn.org/1.5/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)  
+- [Scikit-learn MultinomialNB](https://scikit-learn.org/1.5/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
 
-## Tips On How To Excel
+---
 
+## 🪪 License
 
-* Start early!
-* Ask for help when stuck. Remember the 30 minute rule? No? Look into the syllabus.
-* Break down the problem into smaller tasks and try to implement them in Jupyter Notebook. Once implemented in the notebook successfully, transfer it into `.py` file.
-* Run the `.py` file to make sure the new addition did not break any changes.
-* After implementing each small task, commit changes.
-* Review the notebooks from classes available on GitHub if you cannot remember syntax for anything.
-* Run your code multiple times and vary the inputs to ensure it works as intended. 
-
-## Feedback
-- [10] Version Control Practice
-- [40] ML Steps
-- [50] Question Answers
-- Project 6: 100 points - Excellent implementation and detailed answers!
+This project is licensed under the MIT License.
